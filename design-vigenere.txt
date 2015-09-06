@@ -1,0 +1,41 @@
+# Program Design - Homework 1: Classical Encryption
+
+## Vigenere Cipher
+
+### 1. Understand the Problem
+
+With the Vigenere Cipher, we are trying to encrypt or decrypt a sting with characters in the range of a-z using a specified key. The Vigenere Cipher works by adding corresponding characters of the 'key' string to each character in the string. It should first prompt the user asking whether to 'encode' or 'decode', and then asks for the string and the 'key'.
+
+### 2. Formalize the Interface
+
+The main function should handle all of the inputs from the keyboard. 
+
+```public static String vigenere(String inputText, boolean encode, String inputKey)```
+
+We then have another function, `vigenere`, that takes: the string; a boolean, `encode`, that checks if the function should encode or decode; and the 'key' string. It then encodes or decodes `inputText` and returns the output.
+
+### 3. Write Tests (worked out by hand)
+
+1. encode(String "yinglongisthebest", with key cap) == "aicildpgxutwgbtut"
+2. encode(String "prabirissohandsome", with key yes) == "nvszmjgwkmlslhkmqw"
+3. encode(String "abcdefghijklmnopqrstuvwxyz", with key no) == "npprrttvvxxzzbbddffhhjjlln"
+4. decode(String "btolhlvplrprrd", with key hello) == "updatereadings"
+5. decode(String "dupucmzoh", with key u) == "javaisfun"
+
+### 4. Implement the Program
+
+Our implementation is valid, since all of the encryptions and decrytions have passed the tests from (3).
+
+## Questions
+
+### What does this component do in a single sentence?
+
+The function `vigenere` encodes or decodes `inputText` and returns the output.
+
+### What is the interface to this component? What are its inputs and outputs?
+
+This funciton takes in three parameters: String inputText, boolean encode, and String inputKey. It returns the encrypted string.
+
+### What are five representative test cases this component should pass?
+
+Look at (3) above. 
