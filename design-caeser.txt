@@ -1,0 +1,41 @@
+# Program Design - Homework 1: Classical Encryption
+
+## Caesar Cipher
+
+### 1. Understand the Problem
+
+With the Caesar Cipher, we are trying to encrypt or decrypt a sting with characters in the range of a-z. The Caesar Cipher works by adding a 'key' number to each character in the string. The program returns all 26 possibilities of encrypted or decrypted versions of the given string. It should first prompt the user asking whether to 'encode' or 'decode', and then asks for the string.
+
+### 2. Formalize the Interface
+
+The main function should handle all of the inputs from the keyboard. 
+
+```static void caeser (String inputText, boolean encode)```
+
+We then have another function,  `caesar`, that takes the string and a boolean, `encode`, that checks if the function should encode or decode. It then loops through all possibilities of encryption for the string and prints it to `System.out`.
+
+### 3. Write Tests
+
+1. encode(String "yinglongisthebest", with key 25) == "xhmfknmfhrsgdadrs"
+2. encode(String "prabirissohandsome", with key 16) == "fhqryhyiiexqdtiecu"
+3. encode(String "abcdefghijklmnopqrstuvwxyz", with key 4) == "efghijklmnopqrstuvwxyzabcd"
+4. decode(String "eznkdoboknsxqc", with key 10) == "updatereadings"
+5. decode(String "hytygqdsl", with key 24) == "javaisfun"
+
+### 4. Implement the Program
+
+Our implementation is valid, since all of the encryptions and decrytions have passed the tests from (3).
+
+## Questions
+
+### What does this component do in a single sentence?
+
+The `caesar` function loops through all the possibilites of encryption or decryption for the given string tand prints it to `System.out`.
+
+### What is the interface to this component? What are its inputs and outputs?
+
+This funciton takes in two parameters: String inputText, and boolean encode. It does not return anything, but is called for its side-effects, which is printing the encoded or decoded strings. 
+
+### What are five representative test cases this component should pass?
+
+Look at (3) above. 
